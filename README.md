@@ -4,6 +4,7 @@ This project replicates a Course Browse page from a Figma concept using semantic
 
 ### How to run
 - Open `index.html` in your browser. No build step is required.
+- Run in live server.
 
 ### Features implemented
 - Layout and spacing closely aligned to a modern Figma-style browse page
@@ -30,5 +31,6 @@ This project replicates a Course Browse page from a Figma concept using semantic
 - Toggle category and sort options
 - Toggle Favorites and mark a few courses with ❤
 - Switch dark mode on/off and refresh to confirm persistence
+
 
 
