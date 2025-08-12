@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Course Browse — Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="mainNav" aria-label="Open menu">☰</button>
+      <h1 class="logo">CourseBrowse</h1>
+      <nav id="mainNav" class="main-nav" aria-label="Primary">
+        <a href="#" class="nav-link active">Browse</a>
+        <a href="#" class="nav-link">Categories</a>
+        <a href="#" class="nav-link">About</a>
+        <a href="#" class="nav-link">Contact</a>
+      </nav>
+      <div class="controls">
+        <input id="searchInput" class="search" placeholder="Search courses, e.g. React, UX" aria-label="Search courses" />
+        <select id="categorySelect" class="select" aria-label="Filter by category">
+          <option value="">All categories</option>
+          <option value="Frontend">Frontend</option>
+          <option value="Backend">Backend</option>
+          <option value="Data">Data Science</option>
+          <option value="Design">Design</option>
+        </select>
+        <select id="sortSelect" class="select" aria-label="Sort courses">
+          <option value="popular">Most popular</option>
+          <option value="new">Newest</option>
+          <option value="price-asc">Price: Low → High</option>
+          <option value="price-desc">Price: High → Low</option>
+        </select>
+        <label class="fav-toggle" title="Show favorites only">
+          <input id="favToggle" type="checkbox" />
+          <span>Favorites</span>
+        </label>
+        <button id="themeToggle" class="toggle" aria-label="Toggle theme">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main">
+    <section class="intro">
+      <h2>Browse courses</h2>
+      <p class="muted">Find curated courses — hover a card to see quick actions. Use the search and filters to narrow results.</p>
+    </section>
+
+    <div class="results-bar">
+      <span id="resultCount" aria-live="polite"></span>
+      <button id="clearFilters" class="link-btn" aria-label="Clear filters">Clear</button>
+    </div>
+
+    <section id="coursesGrid" class="grid" aria-live="polite">
+      
+    </section>
+
+    <div id="noResults" class="no-results" hidden>
+      No courses match your search or filters.
+    </div>
+  </main>
+
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalClose"></div>
+    <div class="modal-card">
+      <button id="modalCloseBtn" class="modal-close" aria-label="Close">&times;</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo">CourseBrowse</div>
+          <p class="muted">Discover curated courses to level up your skills.</p>
+        </div>
+        <nav class="footer-col" aria-label="Footer">
+          <div class="footer-title">Explore</div>
+          <a href="#">Browse</a>
+          <a href="#">Categories</a>
+          <a href="#">Popular</a>
+          <a href="#">New</a>
+        </nav>
+        <div class="footer-col">
+          <div class="footer-title">Support</div>
+          <a href="#">Help Center</a>
+          <a href="#">Contact</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <small>© <span id="year"></span> CourseBrowse @2025. All rights reserved.</small>
+        <div class="socials" aria-label="Social links">
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="YouTube">▶️</a>
+          <a href="#" aria-label="GitHub">🐙</a>
+          <a href="#" arial-label="LinkedIn">🔗</a>
+          <a href="#" arial-label="Facebook">📘</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="script.js"></script>
+</body>
+</html>
